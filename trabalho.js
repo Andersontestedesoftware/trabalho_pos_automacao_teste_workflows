@@ -21,23 +21,23 @@ export function calcularConsumoDeRacao(nome_animal, estoque, peso_do_animal) {
   // Caso especial — apenas retorna o valor
   if (consumoDiarioEmGramas === 4350) {
     return consumoDiarioEmGramas;
+  } else {
+
+    const tempoDeDuracaoEstoque = Math.floor(estoque / consumoDiarioEmGramas);
+
+    console.log(`Nome: ${nome_animal}`);
+    console.log(`Peso: ${peso_do_animal} kg`);
+    console.log(`Quantidade em gramas para o dia: ${consumoDiarioEmGramas}g`);
+    console.log(`O estoque dura aproximadamente: ${tempoDeDuracaoEstoque}dias`);
+
+    return {
+      nome: nome_animal,
+      peso: peso_do_animal,
+      consumoDiarioEmGramas,
+      duracaoEstoqueDias: tempoDeDuracaoEstoque
+    };
   }
-
-  const tempoDeDuracaoEstoque = Math.floor(estoque / consumoDiarioEmGramas);
-
-  console.log(`Nome: ${nome_animal}`);
-  console.log(`Peso: ${peso_do_animal} kg`);
-  console.log(`Quantidade em gramas para o dia: ${consumoDiarioEmGramas}g`);
-  console.log(`O estoque dura aproximadamente: ${tempoDeDuracaoEstoque}dias`);
-
-  return {
-    nome: nome_animal,
-    peso: peso_do_animal,
-    consumoDiarioEmGramas,
-    duracaoEstoqueDias: tempoDeDuracaoEstoque
-  };
 }
-
 
 export function decidirTipoDeAtividadePorPorte(porte_do_animal) {
   const atividades = {
@@ -50,7 +50,7 @@ export function decidirTipoDeAtividadePorPorte(porte_do_animal) {
 }
 
 export async function buscarDadoAsync() {
-  const nome = 'Pipoca'; 
+  const nome = 'Pipoca';
 
   if (nome === 'Pipoca') {
     return 'Pipoca';
