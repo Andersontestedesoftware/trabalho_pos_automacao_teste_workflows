@@ -16,9 +16,6 @@ jobs:
         with:
           node-version: '20.x' # Use uma versão LTS (Long Term Support) do Node
 
-      # 3. Instala todas as dependências do projeto listadas no package.json
-      #- name: Instalar dependências
-      #  run: npm ci
       - name: Instalando mocha
         run: npm install -D mocha 
 
