@@ -1,7 +1,7 @@
 name: 'Mocha Teste'
 
 on:
-  workflow_dispatch: # Permite rodar manualmente
+  workflow_dispatch: #Permite rodar manualmente
 jobs:
   mocha_teste:
     runs-on: ubuntu-latest
