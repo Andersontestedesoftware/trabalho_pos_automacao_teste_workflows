@@ -1,0 +1,15 @@
+name: 'mocha teste'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inspecao:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalando mocha
+        run: npm install -D mocha
+
+
